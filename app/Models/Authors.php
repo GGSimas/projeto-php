@@ -18,4 +18,8 @@ class Authors extends Model
         return $this->surname.', '.$this->name;
     }
     protected $dates = ['deleted_at'];
+
+    public function books() {
+        return $this->belongsToMany('App\Models\Books', 'books_authors', 'author_id', 'book_id');
+    }
 }

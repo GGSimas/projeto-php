@@ -39,7 +39,7 @@
                         <ul class="nav navbar-nav">
                             @if(Auth::user()->role == 100)
                                 <li><a href="{{route('author.index')}}">Autores</a></li>
-                                <li><a href="#">Livros</a></li>
+                                <li><a href="{{route('book.index')}}">Livros</a></li>
                                 <li><a href="#">Usuários</a></li>
                             @endif
                             <li><a href="#">Locação</a></li>                        
