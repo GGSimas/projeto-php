@@ -40,9 +40,12 @@
                             @if(Auth::user()->role == 100)
                                 <li><a href="{{route('author.index')}}">Autores</a></li>
                                 <li><a href="{{route('book.index')}}">Livros</a></li>
-                                <li><a href="#">Usuários</a></li>
+                                <li><a href="{{route('lendings.index')}}">Locações</a></li>
                             @endif
-                            <li><a href="#">Locação</a></li>                        
+                            @if(Auth::user()->role == 0)
+                                <li><a href="{{route('lendings.index')}}">Locação</a></li> 
+                                <li><a href="{{route('book.index')}}">Acervo</a></li>      
+                            @endif                 
                         </ul>
                     @endif
                     <!-- Right Side Of Navbar -->

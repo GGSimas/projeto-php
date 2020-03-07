@@ -30,3 +30,14 @@ Route::get('/books/edit/{id}', ['uses' => 'BookController@edit', 'as' => 'book.e
 Route::post('/books/update/{id}', ['uses' => 'BookController@update', 'as' => 'book.update']);
 Route::get('/books/delete/{id}', ['uses' => 'BookController@delete', 'as' => 'book.delete']);
 Route::put('/books/search', ['uses' => 'BookController@search', 'as' => 'book.search']);
+
+Route::get('/lendings', ['uses' => 'LendingController@index', 'as' => 'lendings.index']);
+Route::get('/lendings/add', ['uses' => 'LendingController@add', 'as' => 'lendings.add']);
+Route::get('/lendings/addremove', ['uses' => 'LendingController@addremove', 'as' => 'lendings.addremove']);
+Route::post('/lendings/save', ['uses' => 'LendingController@save', 'as' => 'lendings.save']);
+Route::get('/lendings/edit/{id}', ['uses' => 'LendingController@edit', 'as' => 'lendings.edit']);
+Route::post('/lendings/update/{id}', ['uses' => 'LendingController@update', 'as' => 'lendings.update']);
+Route::get('/lendings/delete/{id}', ['uses' => 'LendingController@delete', 'as' => 'lendings.delete']);
+Route::get('/lendings/giveback/{id}', ['uses' => 'LendingController@giveback', 'as' => 'lendings.giveback']);
+Route::put('/lendings/search', ['uses' => 'LendingController@search', 'as' => 'lendings.search']);
+Route::put('/lendings/searchbook', ['uses' => 'LendingController@searchbook', 'as' => 'lendings.searchbook']);
