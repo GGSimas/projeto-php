@@ -20,6 +20,7 @@ class CreateLendingsTable extends Migration
             $table->timestamp('end_date')->nullable();
             $table->timestamp('date_finished')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
 
         Schema::table('lendings', function (Blueprint $table) {

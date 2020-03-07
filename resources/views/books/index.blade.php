@@ -41,8 +41,10 @@
                            <td>{{ $book->title }}</td>
                            <td  style="max-width: 100px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">{{$book->description }}</td>              
                            <td width="155" class="text-center">
+                            @if(Auth::user()->role == 100)
                                <a href="{{route('book.edit', $book->id)}}" class="btn btn-default">Editar</a>
                                <a href="{{route('book.delete', $book->id)}}" class="btn btn-danger">Excluir</a>
+                            @endif
                            </td>
                        </tr>
                    @endforeach
